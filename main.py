@@ -25,6 +25,10 @@ def main():
             drawa.draw(screen)
         for updatea in updatable:
             updatea.update(dt)
+        for asteroid in asteroids:
+            if asteroid.collides(player):
+                print("Game over!")
+                return
 
         dt = clock.tick(60) / 1000
         for event in pygame.event.get():
