@@ -38,7 +38,7 @@ def main():
             for asteroid in asteroids:
                 if bullet.collides(asteroid):
                     bullet.kill()
-                    asteroid.kill()
+                    asteroid.split()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
