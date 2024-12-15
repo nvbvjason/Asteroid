@@ -23,6 +23,7 @@ def main():
 
     while (True):
         screen.fill(color="black")
+        dt = clock.tick(60) / 1000
 
         for drawa in drawable:
             drawa.draw(screen)
@@ -33,7 +34,7 @@ def main():
                 print("Game over!")
                 return
 
-        dt = clock.tick(60) / 1000
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
